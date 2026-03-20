@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+ <html lang='eng'>
+ <link rel="stylesheet" href="style.css">
+ 
+<head>
+    <style>
+        .header{
+            background: #FF0000;
+            padding: 20px;
+            font-family: 'Pokemon Solid';
+            font-size: 15px;
+            text-align: center;
+        }
+        
+        .nav{
+            background: ;
+            padding: 10px;
+            font-family: 'Arial';
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Pokedéx</h1>
+    </div>
+</body>
+</html>
