@@ -7,15 +7,26 @@
         .header{
             background: #FF0000;
             padding: 20px;
-            font-family: 'Pokemon Solid';
+            font-family: 'PokemonHollow', sans-serif;
+            color: #ffcb05;
+            -webkit-text-stroke: 2px #3c5aa6;
+            text-stroke: 1px #3c5aa6;
+            letter-spacing: 2px;
             font-size: 15px;
             text-align: center;
         }
         
         .nav{
-            background: ;
+            background: lightgreen;
             padding: 10px;
             font-family: 'Arial';
+        }
+        .container{
+            background: #ffffff;
+            padding: 20px;
+            display:broke;
+            right: 10px;
+            left: 10px;
         }
     </style>
 </head>
@@ -23,5 +34,13 @@
     <div class="header">
         <h1>Pokedéx</h1>
     </div>
+    
+    <div class="nav">
+        
+    </div>
+    <div class="container">
+        <img src:>
+    </div>
+    
 </body>
 </html>
