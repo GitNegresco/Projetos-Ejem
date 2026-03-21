@@ -1,9 +1,12 @@
 <!DOCTYPE html>
  <html lang='eng'>
- <link rel="stylesheet" href="style.css">
  
 <head>
     <meta charset="UTF-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Pokedéx</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./favicons/favicon-16x16.png">
     <style>
         .script.js{
           
@@ -12,7 +15,7 @@
         .header{
             background: #FF0000;
             padding: 20px;
-            font-family: 'PokemonHollow', sans-serif;
+            font-family: 'Pokemonhollow', sans-serif;
             color: #ffcb05;
             -webkit-text-stroke: 2px #3c5aa6;
             text-stroke: 1px #3c5aa6;
@@ -23,7 +26,7 @@
         
         .nav{
             background: lightgreen;
-            padding: 10px;
+            padding: 15px;
             font-family: 'Arial';
         }
         
@@ -67,7 +70,7 @@
     </div>
     
     <footer>
-      <p> ©Pokémon Company - All rigths reserved<p/>
+      <p>©Pokémon Company 2026</p>
     </footer>
     
 </body>
