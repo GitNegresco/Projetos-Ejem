@@ -1,5 +1,5 @@
 <!DOCTYPE html>
- <html lang='eng'>
+<html lang='eng'>
  
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,122 @@
     <title>Pokedéx</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./favicons/favicon-16x16.png">
+    <script>
+     let cont = 0;
+     function inicio() {
+
+       ap();
+       setInterval(() => {
+         cont += 1;
+         document.querySelector('#barra').style.width = cont + '%';
+         if (cont > 100) {
+            document.querySelector('.container2').style.display = 'none';
+             document.querySelector('.pokedex').style.display = 'flex';  
+             document.querySelector('.placa-esquerda').style.display = 'block';
+             document.querySelector('.placa-direita').style.display = 'flex';
+             document.querySelector('.sup-lateral1').style.display = 'block';
+             document.querySelector('.caixa').style.backgroundColor = '#f8ee5f';  
+            let cont2 = 0;
+            let time2 = setInterval(() => {
+                cont2 += 1;
+                if (cont2 > 80) {
+                    clearInterval(time2);
+                  }
+               }, 100);
+            
+           }
+       }, 50);
+
+   }  
+
+
+
+    let nome = document.querySelector(".pesquisa");
+    let nomecampo = document.querySelector(".quad");
+    let Tela = document.querySelector(".tela3");
+    let numeroPok = document.querySelector(".pt1-display");
+    let numImg = 001;
+    let n = 1;
+    let api = [];
+    let apiImg = [];
+    let resulImg = [];
+    let resul = [];
+    let idPok = [];
+    let namePok = [];
+
+  function pesquisar() {
+    nome.value = nome.value.toLowerCase()
+    if (namePok.indexOf(nome.value) < 0) {
+        alert("não tem")
+    } else {
+        nomecampo.innerHTML = nome.value;
+        numeroPok.innerHTML = "Nº " + ((namePok.indexOf(nome.value)) + 1);
+        Tela.style.backgroundImage = `url(${img[namePok.indexOf(nome.value) + 1]})`;
+        n = namePok.indexOf(nome.value)
+        numImg = namePok.indexOf(nome.value) + 1;
+       }
+   }
+
+ function left() {
+    if (n > 1) {
+        n -= 1;
+        numImg--;
+        nomecampo.innerHTML = namePok[n - 1];
+        numeroPok.innerHTML = "Nº " + (idPok[n]);
+        Tela.style.backgroundImage = `url(${img[n]})`;
+        console.log(n);
+       }
+   }
+
+ function right() {
+    if (n <= 150) {
+        numImg++;
+        n++;
+        nomecampo.innerHTML = namePok[n - 1];
+        numeroPok.innerHTML = "Nº " + (idPok[n]);
+        Tela.style.backgroundImage = `url(${img[n]})`;
+        console.log(n)
+
+       }
+   }
+
+  let img = [];
+  let a = 1;
+  async function ap() {
+     for (let i = 1; i <= 151; i++) {
+         img[i] = 'https://pokeres.bastionbot.org/images/pokemon/' + i + '.png';
+     }
+     let i = document.querySelector('.caixa');
+     Tela.style.backgroundImage = `url(${img[1]})`;
+     apiInfo();
+   }
+
+  async function apiInfo() {
+     for (let i = 1; i <= 151; i++) {
+         api[i] = await fetch('https://pokeapi.co/api/v2/pokemon/' + i);
+         resul[i] = await api[i].json();
+
+       }
+       infoPok();
+  }
+
+ function infoPok() {
+     for (let i = 1; i <= 151; i++) {
+         namePok.push(resul[i].name);
+         idPok[i] = resul[i].id;
+      }
+      console.log(namePok.length)
+  }
+ </script>
     <style>
-        .script.js{
-          
+         *{
+           box-sizing: border-box;
         }
-        
-        .header{
+          body{
+            background-color: #282828;
+            margin: 0;
+            padding: 0;
+         .header{
             background: #FF0000;
             padding: 20px;
             font-family: 'Pokemonhollow', sans-serif;
@@ -43,12 +153,6 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         
-        footer{
-            background: #333;
-            text-align: center;
-            padding: 20px;
-            color: white;
-        }
     </style>
 </head>
 <body>
@@ -68,10 +172,6 @@
     
     <div class="container">
     </div>
-    
-    <footer>
-      <p>©Pokémon Company 2026</p>
-    </footer>
-    
+      
 </body>
 </html>
