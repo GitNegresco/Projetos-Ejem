@@ -31,8 +31,15 @@
       />
     </form>
 
+    <div class="pokemon__extra_data">
+      <span class="pokemon__type"></span> 
+      <span class="pokemon__moves"></span>
+      <p class="pokemon__type"></p>
+      <p class="pokemon__moves"></p>
+    </div>
+
     <div class="buttons">
-      <button class="button btn-prev">Prev &lt;</button>
+      <button class="button btn-prev">Prev &lt;</button> 
       <button class="button btn-next">Next &gt;</button>
     </div>
 
