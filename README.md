@@ -1,1 +1,2 @@
-OBSERVAÇãO: as imagens e arquivos para a Pokedéx em html/css/javascript estão esparado e disponíveis neste repositório(não sabia de nenhum modo de deixa-los reunidos, só puxei um por um do vscode, perdão qualquer incomo ou dificuldade em abrir o projeto)
+Repositório de trabalhos feitos para EJEM.
+OBS: Os arquivos da Pokédex estão na pasta devida exceto as imagens utilizadas.
