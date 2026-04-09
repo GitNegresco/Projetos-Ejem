@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'paginas_site/style.css' %}">
+    <title>Tela de Login</title>
+</head>
+<body>
+    <h1>Bem-Vindo a SunOps ☀️</h1>
+    <div class="container_login">
+        <div class="img_box">
+            <img src="https://img.freepik.com/vetores-premium/ilustracao-do-conceito-de-politica-de-privacidade_114360-7853.jpg">
+        </div>
+        <div class="content_box">
+            <div class="form_box">
+                <h2>Faça seu login</h2>
+                <form>
+                    <div class="input_box">
+                        <span>Usuário</span>
+                        <input type="email" placeholder="@mail.com">
+                    </div>
+
+                    <div class="input_box">
+                        <span>Senha</span>
+                        <input type="password" placeholder="password">
+                    </div>
+
+                    <div class="remenber">
+                        <label>
+                            <input type="checkbox"> Lembrar-me
+                        </label>
+                        <a href="#">Esqueci minha senha</a>
+                    </div>
+                    
+                    <div class="input_box">
+                        <input type="submit" value="Entrar">
+                    </div>
+                    
+                    <div class="input_box">
+                        <p>Não tem uma conta? <a href="#">Registrar-se</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

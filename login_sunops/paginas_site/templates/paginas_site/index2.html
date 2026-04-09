@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+    <head>
+        <meta http-equiv='Content-type' content='text/html; charset=UTF-8'/>
+        <meta name='description' content='Passe uma descrição do seu site.'>
+        <meta name='keywords' content='Palavras chaves do seu site separadas por vírgula.'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <link rel='shortcut icon' href='#'>
+        <title>Página de Cadastro</title>
+        <link rel="stylesheet" href="{% static 'paginas_site/style2.css' %}">
+    </head>
+    <body class="all-center column bg-color-1 img-cadastro-fundo">
+        <h1>Boas Vindas ao Sunops!</h1>
+        <main class="all-center column">
+            <form action="../php/cadastro.php" method="POST">
+                <div class="box-cadastro2 all-center column bg-color-3">
+                    <h1>Cadastro</h1>
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
+                    <br>  
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
+                    <br>  
+                    <label for="senha">Senha</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                    <br>  
+                    <input type="submit" class="btn-cadastro" value="Criar Conta"></input>
+                    <p>ou</p>
+                    <p>Já está cadastrado?</p>
+                    <a href="{% url 'login' %}">
+                    <button>Fazer Login</button>
+                    </a>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
